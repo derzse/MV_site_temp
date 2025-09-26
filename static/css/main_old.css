@@ -1,0 +1,618 @@
+/* main.css content */
+
+:root {
+    --black: hsla(0, 0%, 0%, 1);
+    --eerie-black: hsla(0, 0%, 12%, 1);
+    --charcoal: hsla(214, 25%, 24%, 1);
+    --ghost-white: hsla(231, 100%, 97%, 1);
+    --school-bus-yellow: hsla(50, 100%, 54%, 1);
+    --murrey: hsla(333, 100%, 28%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+    --antiflash-white: hsla(0, 0%, 93%, 1);
+}
+
+/* body {
+    text-align: center;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+} */
+
+body {
+  /* font-family: Roboto, "Trebuchet MS", Helvetica, sans-serif; */
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--charcoal); /* #676767; */
+  font-size: 13px;
+  background-color: var(--white);
+  background-size: cover;
+  text-align: center;
+}
+
+.container_temp {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: center; /* Centers the items horizontally */
+  text-align: left; /* Aligns the text to the left for the links */
+  gap: 20px; /* Adds some space between the image and the links */
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  margin: 0 auto;
+  display: block;
+  width: 100%; /* or any specific width */
+}
+
+.center {
+  margin: auto;
+  width: 100%;
+  padding: 0px;
+}
+
+.social-links a {
+  display: block; /* Makes each link its own line */
+  margin: 2px 0; /* Adds a little space between links */
+}
+
+.site-footer {
+  background-color: var(--charcoal) /* var(--school-bus-yellow);*/
+  color: var(--white); /* White text color */
+  padding: 10px 0; /* Padding around the footer */
+  justify-content: center;
+
+}
+
+.site-footer .container {
+  text-align: center; /* Center align the content */
+  font-size: 11px; /* Standard font size */
+}
+
+div#footer_id.site-footer {
+  background-color: var(--charcoal); /* Eerie-Black background color */
+  color: var(--ghost-white); /* Ghost-White text color */
+  padding: 10px; /* Padding around the content */
+  text-align: center; /* Center align the content */
+  font-size: 11px; /* Font size */
+}
+
+div#footer_id.site-footer .container {
+  /* max-width: 1170px; Maximum width of the container */
+  margin: auto; /* Center the container */
+  padding: 2px; /* Padding inside the container */
+  align-items: center; /* Centers items vertically */
+
+}
+
+div.footer-inner {
+  background-color: var(--charcoal)/*var(--eerie-black); */
+  padding: 10px;
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  flex-wrap: wrap; /* Allows items to wrap if needed */
+  text-align: center; /* Centers text inside the child elements */
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
+}
+
+div.site-info {
+  background-color: var(--charcoal); /*var(--murrey);*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  /* max-width: 1170px; */
+}
+
+.site-info-inner .row {
+  /* max-width: 1170px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+
+}
+
+.site-info-overlay {
+  background-color: var(--charcoal);/*var(--school-bus-yellow); /*#1c1c1c;*/
+  max-width: 1320px;
+  margin: 0 auto;
+  display: block;
+}
+
+.site-info-inner .mv-footer-text-left {
+  text-align: left
+}
+
+.site-info-inner .mv-footer-text-right {
+  text-align: right
+}
+
+.footer-nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right
+}
+
+#menu-footer-menu {
+  display: flex;
+  justify-content: space-between; /* This spreads the items evenly across the container */
+  list-style: none; /* Removes the default list bullet points */
+  padding: 0; /* Removes the default padding */
+}
+
+#menu-footer-menu li a {
+  text-decoration: none; /* Removes the underline from links */
+  color: var(--white); /*#ffffff; /* Sets the link color to white, adjust as needed */
+}
+
+#menu-footer-menu li a:hover {
+  color: var(--ghost-white); /*#cccccc; /* Changes the link color on hover, adjust as needed */
+}
+
+#menu-footer-menu {
+  list-style: none; /* Remove default list bullets */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margins */
+  display: flex; /* Display list items inline */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Center items vertically */
+}
+
+#menu-footer-menu li {
+  position: relative;
+  padding-left: 10px; /* Add spacing on the left of each link */
+  padding-right: 5px; /* Add spacing on the left of each link */
+}
+
+#menu-footer-menu li:not(:first-child)::before {
+  content: "|"; /* Vertical line */
+  position: absolute;
+  left: 0;
+  color: var(--school-bus-yellow); /* Adjust the color as needed */
+}
+
+.footer-inner .widget {
+  margin: 20px 0 20px
+}
+
+.footer-inner #footer-top .widget {
+  margin-top: 20px;
+  margin-bottom: 10px
+}
+
+.footer-inner #footer-top .widget .vc_column_container {
+  float: none
+}
+
+/* Ensures the paragraph below is left-aligned with the image */
+.textwidget > p {
+  text-align: left;
+  margin-top: 5px; /* Adds some space above the paragraph for separation */
+  line-height: 1.25; /* Adjusts the line spacing to be tighter. Default is usually around 1.4 to 1.6 */
+}
+
+.flex-container {
+  display: flex;
+  align-items: center; /* Aligns the image and text vertically in the center */
+}
+
+.text-next-to-image {
+  margin-left: 8px; /* Adds space between the image and the text */
+  font-size: x-small;
+  line-height: 1.25; /* Adjusts the line spacing to be tighter. Default is usually around 1.4 to 1.6 */
+  margin-bottom: 0px;
+}
+
+div.widget-area{
+  text-align: left;
+  /* font-family: Roboto, "Trebuchet MS", Helvetica, sans-serif; */
+}
+
+.widget ol, .widget ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mv-footer-info-box .vc_column-inner {
+  border: 1px solid rgba(255,255,255,.2);
+  border-bottom: 3px solid rgba(255,255,255,.2)
+}
+
+.mv-footer-info-box .vc_icon_element.vc_icon_element-outer {
+  display: table-cell;
+  border-right: 1px solid rgba(255,255,255,.2);
+  vertical-align: middle;
+  padding-right: 6px
+}
+
+.icon-spacing {
+  margin-right: 10px; /* Adds some space between the icon and the text */
+  /* align-self: center; Adjust this based on the alignment issue */
+  min-width: 12px; /* Ensures the icon's minimum width is 12px */
+  /* display: inline-block; Allows width and height to be applied */
+  display: inline-flex; /* Utilizes flexbox for alignment */
+  vertical-align: middle; /* Aligns icon with text if necessary */
+  align-items: center; /* Centers icon if needed, adjust based on your design */
+    
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start; /* Aligns items at the start of the container */
+}
+
+.contact-info-text {
+  margin-left: 0px; /* Adjusts spacing between the icon and the text */
+}
+
+
+.vc_icon_element-icon {
+  display: table-cell;
+  font-size: x-small;
+  font-family: Lato;
+  vertical-align: middle;
+  padding-right: 6px
+}
+
+.mv-footer-info-box .tm-element-heading-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 17px 0 17px 20px
+}
+
+.mv-footer-info-box .tm-element-heading-wrapper .vc_cta3-container {
+  margin-bottom: 0
+}
+
+.mv-footer-info-box .tm-element-heading-wrapper .vc_cta3-content-header h4 {
+  margin-bottom: 3px
+}
+
+.vc_column_container {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.tm-col-main, .tm-col-main .vc_column-inner, .vc_row {
+  position: relative;
+}
+
+.vc_col-lg-1, .vc_col-lg-10, .vc_col-lg-11, .vc_col-lg-12, .vc_col-lg-2, .vc_col-lg-3, .vc_col-lg-4, .vc_col-lg-5, .vc_col-lg-6, .vc_col-lg-7, .vc_col-lg-8, .vc_col-lg-9, .vc_col-md-1, .vc_col-md-10, .vc_col-md-11, .vc_col-md-12, .vc_col-md-2, .vc_col-md-3, .vc_col-md-4, .vc_col-md-5, .vc_col-md-6, .vc_col-md-7, .vc_col-md-8, .vc_col-md-9, .vc_col-sm-1, .vc_col-sm-10, .vc_col-sm-11, .vc_col-sm-12, .vc_col-sm-2, .vc_col-sm-3, .vc_col-sm-4, .vc_col-sm-5, .vc_col-sm-6, .vc_col-sm-7, .vc_col-sm-8, .vc_col-sm-9, .vc_col-xs-1, .vc_col-xs-10, .vc_col-xs-11, .vc_col-xs-12, .vc_col-xs-2, .vc_col-xs-3, .vc_col-xs-4, .vc_col-xs-5, .vc_col-xs-6, .vc_col-xs-7, .vc_col-xs-8, .vc_col-xs-9 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.tm-col-main .tm-col-overlay, .tm-sbox-bg-image .tm-sbox-overlay, .vc_row .tm-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.tm-footer-info-box .vc_column-inner {
+  border: 1px solid rgba(255,255,255,.2);
+  border-bottom: 3px solid rgba(255,255,255,.2);
+}
+
+.vc_column_container>.vc_column-inner {
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+/* *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+} */
+
+.tm-footer-info-box .vc_icon_element.vc_icon_element-outer {
+  display: table-cell;
+  border-right: 1px solid rgba(255,255,255,.2);
+  vertical-align: middle;
+  padding-right: 6px;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-size-lg {
+  max-width: 100%!important;
+  line-height: 2.85em!important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner {
+  text-align: center;
+  display: inline-block;
+  border: 2px solid transparent;
+  width: 4em;
+  height: 4em;
+  box-sizing: content-box;
+  position: relative;
+}
+.vc_icon_element-style-.vc_icon_element-background-color-skincolor {
+  background-color: transparent;
+}
+
+.tm-heading-inner {
+  width: 100%;
+  height: auto;
+  /* max-width: 1170px; */
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.tm-element-heading-wrapper {
+  position: relative;
+}
+
+.tm-footer-info-box .tm-element-heading-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 17px 0 17px 20px;
+}
+
+.tm-footer-info-box .tm-element-heading-wrapper .vc_cta3-container {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px)
+.site-footer .vc_cta3-container {
+  margin-bottom: 0px;
+}
+.vc_cta3-container {
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vc_general.vc_cta3.vc_cta3-style-transparent {
+  padding: 0;
+}
+
+.vc_general.vc_cta3.vc_cta3-shape-rounded {
+  border-radius: 5px;
+}
+.vc_general.vc_cta3 {
+  border: 1px solid transparent;
+  font-size: 1em;
+  padding: 28px 28px;
+  word-wrap: break-word;
+}
+
+.vc_general.vc_cta3.vc_cta3-align-left .vc_cta3-content {
+  text-align: left;
+}
+
+.vc_general.vc_cta3 .vc_cta3-content {
+  width: 100%;
+}
+.vc_general.vc_cta3 .vc_cta3-content {
+  vertical-align: top;
+}
+
+.footer-container { /* A more specific class name for the footer's container */
+  display: block; /* Resets to default block layout */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  vertical-align: middle;
+}
+
+.social-icons {
+  list-style: none; /* Removes default list styling */
+  padding-left: 0; /* Removes default padding */
+}
+
+.social-icons li {
+  display: inline-block; /* Displays the list items inline */
+  margin-right: 10px; /* Adds space between the icons */
+}
+
+/* Optional: Ensure the last item doesn't have a margin to the right */
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.social-icons li>a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 24px;
+  font-size: 18px;
+  text-align: center;
+  color: var(--school-bus-yellow);
+}
+
+.site-footer .social-icons li>a {
+  width: 36px;
+  height: 36px;
+  line-height: 35px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  background-color: rgba(255,255,255,.08);
+}
+
+body .widget .widget-title, body .widget .widgettitle, #navbar #site-navigation .mega-menu-wrap .mega-menu.mega-menu-horizontal .mega-sub-menu > li.mega-menu-item > h4.mega-block-title {
+  text-transform: uppercase;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--ghost-white);
+  font-size: 19px;
+}
+
+.site-footer .widget .widget-title {
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+
+/* Style for the link */
+a[href="mailto:echipa@modusvivendioradea.com"] {
+  color: var(--school-bus-yellow); /* Normal state color */
+  text-decoration: none; /* Optional: removes underline */
+}
+
+/* Style for the link on hover and focus */
+a[href="mailto:echipa@modusvivendioradea.com"]:hover,
+a[href="mailto:echipa@modusvivendioradea.com"]:focus {
+  color: var(--ghost-white); /* Color when hovered or focused */
+}
+
+#text-6 .textwidget {
+  text-align: left; /* Aligns text and inline/inline-block elements to the right */
+}
+
+@media (max-width: 768px) {
+  .mv-footer-text-left, .mv-footer-text-right {
+      flex-basis: 100%; /* Forces elements to take full width on small screens */
+      text-align: center; /* Centers the text */
+      margin-bottom: 10px; /* Adds space between stacked elements */
+  }
+
+  .footer-nav-menu {
+      justify-content: center;
+      padding-left: 0; /* Removes default padding */
+  }
+
+  .footer-nav-menu li {
+      display: inline-block; /* Optional: Align menu items inline */
+      margin-right: 5px; /* Adds some space between inline items */
+  }
+}
+
+.site-info a {
+  color: var(--school-bus-yellow); /* Example: Sets link color */
+  text-decoration: none; /* Removes underline */
+}
+
+.site-info a:hover {
+  color: var(--ghost-white); /* Changes link color on hover */
+}
+
+.section_body{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.section_padding{
+  padding: 1px 32px;
+}
+
+.section_container {
+  display: flex;
+  flex-direction: row;
+}
+
+.section_container_first {
+  flex: 1 0;
+  min-width: 0;
+}
+
+.section_container_first_padding{
+  padding-right: 112px;
+}
+
+.section_container_head:not(:last-child) {
+  margin-bottom: 48px;
+}
+
+.left{
+  text-align: left;
+}
+
+.top32px{
+  margin-top: 32px;
+}
+
+.boxalign{
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.boxtext{
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.boxcolor{
+  color: var(--eerie-black);
+}
+
+.section_container_second {
+  flex: 0 0 288px;
+  width: 288px;
+}
+
+.section_title_box{
+  justify-content: center;
+  background-color: var(--murrey);
+  border-radius: 2px;
+}
+
+@media (min-width: 900px){
+.section_title_box {
+    min-height: 344px;
+}
+
+.section_title_line{
+  width: calc((100% - 264px)/12*8 + 168px);
+  position: relative;
+}
+}
+
+.section_title_head {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  min-height: 240px;
+  overflow: hidden;
+}
+
+.section_title_line{
+  text-align: center;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.section_title_text{
+  color: var(--school-bus-yellow);
+  font-size: medium;
+}
+
+.section_title_h1{
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+}

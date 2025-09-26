@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block head_extra %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">  
+{% endblock head_extra %}
+
+{% block header %}
+    <img src="{{ url_for('static', filename='images/MVO_Logo.jpg') }}" alt="Logo" style="height: 50px;">  
+{% endblock %}
+
+{% block notification_bar %}
+    {%include 'donate.html' %}
+{% endblock %}
+
+{% block content %}
+    <h1>Stay tuned for updates.</h1>
+    <p>Welcome to our website! We're working on something great!</p>
+    <div class="container_temp">
+        <!-- <img src="{{ url_for('static', filename='images/MVO_Logo.jpg') }}" alt="Work in Progress" style="width: 3cm;">
+        <div class="social-links">
+            <a href="https://www.facebook.com/RO061-Modus-Vivendi-297190080685870" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/modusvivendioradea/" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/company/modus-vivendi-oradea/mycompany/" target="_blank">LinkedIn</a>
+        </div> -->
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}
