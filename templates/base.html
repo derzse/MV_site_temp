@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ CURRENT_LANGUAGE }}">
 <head>
     <!-- Google tag (gtag.js) - Keep this in your HTML head -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTHY6NRHR1"></script>
@@ -21,21 +21,24 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Default Title{% endblock title %}</title>
+    <title>{% block title %}{{ _('Home Page') }} - Modus Vivendi Oradea{% endblock title %}</title>
     {% block head_extra %}{% endblock head_extra %}
 </head>
 <body>
     <div id="notification-bar" style="background-color: #ddd; text-align: center; padding: 5px;">
-        {% block notification_bar %}Default Notification{% endblock %}
+        {% block notification_bar %}{{ _('Default Notification') }}{% endblock %}
     </div>
     <header style="display: flex; justify-content: space-between; align-items: center; background-color: #f8f9fa; padding: 10px;">
-        <div>{% block header %}Default Logo{% endblock header %}</div>
+        <div>{% block header %}{{ _('Default Logo') }}{% endblock header %}</div>
+        <div class="header-actions">
+            {% include 'language_switcher.html' %}
+        </div>
     </header>
     <nav>
         <!-- Navigation links here -->
     </nav>
     <main>
-        {% block content %}Default Content{% endblock content %}
+        {% block content %}{{ _('Default Content') }}{% endblock content %}
     </main>
     <footer>
         {% block footer %}
