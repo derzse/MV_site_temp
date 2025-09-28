@@ -379,6 +379,7 @@ div.widget-area{
 .site-footer .vc_cta3-container {
   margin-bottom: 0px;
 }
+
 .vc_cta3-container {
   margin-bottom: 35px;
   margin-left: auto;
@@ -684,34 +685,3 @@ a[href="mailto:echipa@modusvivendioradea.com"]:focus {
 .donate-button .donatebtn:hover {
   background-color: #45a049;
 }
-
-    .language-switcher {
-        display: inline-block;
-    }
-    
-    .language-switcher .dropdown-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 1rem;
-    }
-    
-    .language-switcher .dropdown-item.active {
-        background-color: var(--murrey, #722f37);
-        color: var(--ghost-white, #f8f8ff);
-    }
-    
-    .language-switcher .flag {
-        margin-left: 0.5rem;
-    }
-    
-    .language-switcher .btn {
-        border-color: var(--school-bus-yellow, #ffd320);
-        color: var(--school-bus-yellow, #ffd320);
-    }
-    
-    .language-switcher .btn:hover {
-        background-color: var(--school-bus-yellow, #ffd320);
-        color: var(--murrey, #722f37);
-        border-color: var(--school-bus-yellow, #ffd320);
-    }
