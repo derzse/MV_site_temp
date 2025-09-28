@@ -1,20 +1,49 @@
-# English translations for PROJECT.
-# Copyright (C) 2025 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# Save this as translations/en/LC_MESSAGES/messages.po
+# English translations for Modus Vivendi Oradea
+# Copyright (C) 2024 Modus Vivendi Oradea
+# This file is distributed under the same license as the project.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-27 09:35+0300\n"
-"PO-Revision-Date: 2025-09-27 09:35+0300\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: echipa@modusvivendioradea.com\n"
+"POT-Creation-Date: 2024-09-28 15:00+0000\n"
+"PO-Revision-Date: 2024-09-28 15:00+0000\n"
+"Last-Translator: Modus Vivendi Team\n"
 "Language: en\n"
-"Language-Team: en <LL@li.org>\n"
+"Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.12.1\n"
 
+msgid "Default Content"
+msgstr "Default Content"
+
+msgid "Default Logo"
+msgstr "Default Logo"
+
+msgid "Default Notification"
+msgstr "Default Notification"
+
+msgid "Download Form 230"
+msgstr "Download Form 230"
+
+msgid "Home Page"
+msgstr "Home Page"
+
+msgid "Logo"
+msgstr "Logo"
+
+msgid "Modus Vivendi Oradea"
+msgstr "Modus Vivendi Oradea"
+
+msgid "Stay tuned for updates."
+msgstr "Stay tuned for updates."
+
+msgid "Welcome to our website! We are working on something great!"
+msgstr "Welcome to our website! We are working on something great!"
+
+msgid "donate_message"
+msgstr "is a non-profit organization and depends on you. Contribute to our cause by redirecting 3.5% of your income tax to us! Download Form 230 now and support our activities at no additional cost to you."
