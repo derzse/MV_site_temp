@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- <html lang="en"> -->
+<html lang="ro" prefix="og: https://ogp.me/ns#">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Google tag (gtag.js) - Keep this in your HTML head -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTHY6NRHR1"></script>
     <script src="{{ url_for('static', filename='js/analytics.js') }}"></script>
@@ -21,7 +25,54 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Default Title{% endblock title %}</title>
+    <!-- Dynamic Title from your SEO system -->
+    <title>{% block title %}{{ page_title or get_seo_title() }}{% endblock title %}</title>
+
+     <!-- Enhanced Meta Tags -->
+    <meta name="description" content="{% block description %}Modus Vivendi Oradea - Prima echipă FIRST Tech Challenge din Oradea cu 8 ani de experiență. Design Award winners, robotică competițională și educație STEM.{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}FTC Oradea, robotica Oradea, FIRST Tech Challenge Romania, echipa robotica, STEM education, Modus Vivendi, competitie robotica, Design Award, robotica pentru tineri{% endblock %}">
+    <meta name="author" content="Modus Vivendi Oradea">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ request.url }}">
+    
+    <!-- Language and Geographic Targeting -->
+    <meta name="geo.region" content="RO-BH">
+    <meta name="geo.placename" content="Oradea">
+    <meta name="geo.position" content="47.0722;21.9178">
+    <meta name="ICBM" content="47.0722, 21.9178">
+    <link rel="alternate" hreflang="ro" href="{{ request.url }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:title" content="{{ page_title or get_seo_title() }}">
+    <meta property="og:description" content="Prima echipă FTC din Oradea cu peste 8 ani de experiență în robotică competițională. Design Award winners și inovatori în STEM education.">
+    <meta property="og:image" content="{{ url_for('static', filename='images/og-image.jpg', _external=True) }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Modus Vivendi Oradea - Echipa FTC">
+    <meta property="og:site_name" content="Modus Vivendi Oradea">
+    <meta property="og:locale" content="ro_RO">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ request.url }}">
+    <meta name="twitter:title" content="{{ page_title or get_seo_title() }}">
+    <meta name="twitter:description" content="Prima echipă FTC din Oradea - Design Award winners în robotică competițională și educație STEM.">
+    <meta name="twitter:image" content="{{ url_for('static', filename='images/twitter-card.jpg', _external=True) }}">
+    <meta name="twitter:image:alt" content="Modus Vivendi Oradea Team">
+    
+    <!-- Favicons and App Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ url_for('static', filename='images/safari-pinned-tab.svg') }}" color="#8e44ad">
+    <meta name="msapplication-TileColor" content="#8e44ad">
+    <meta name="theme-color" content="#8e44ad">
+    
     {% block head_extra %}{% endblock head_extra %}
 </head>
 <body>
