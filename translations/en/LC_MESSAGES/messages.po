@@ -1,0 +1,228 @@
+# Save this as translations/en/LC_MESSAGES/messages.po
+# English translations for Modus Vivendi Oradea
+# Copyright (C) 2024 Modus Vivendi Oradea
+# This file is distributed under the same license as the project.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version:  1.0\n"
+"Report-Msgid-Bugs-To: echipa@modusvivendioradea.com\n"
+"POT-Creation-Date: 2025-09-28 15:00+0300\n"
+"PO-Revision-Date: 2024-09-28 15:00+0000\n"
+"Last-Translator: Modus Vivendi Team\n"
+"Language: en\n"
+"Language-Team: English\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+# Additional page titles
+#: app.py:65
+msgid "Modus Vivendi Oradea - FTC Robotics Team | Innovation in Oradea"
+msgstr "Modus Vivendi Oradea - FTC Robotics Team | Innovation in Oradea"
+
+#: app.py:66
+msgid "About Modus Vivendi | FTC Team Oradea - 8 Years Experience"
+msgstr "About Modus Vivendi | FTC Team Oradea - 8 Years Experience"
+
+#: app.py:67
+msgid "Privacy Policy | Modus Vivendi Oradea FTC Team"
+msgstr "Privacy Policy | Modus Vivendi Oradea FTC Team"
+
+#: app.py:68
+msgid "Contact Modus Vivendi | FTC Robotics Team Oradea"
+msgstr "Contact Modus Vivendi | FTC Robotics Team Oradea"
+
+#: app.py:69
+msgid "Our FTC Projects | Modus Vivendi Robotics Oradea"
+msgstr "Our FTC Projects | Modus Vivendi Robotics Oradea"
+
+#: app.py:70
+msgid "FTC Events & Competitions | Modus Vivendi Oradea"
+msgstr "FTC Events & Competitions | Modus Vivendi Oradea"
+
+#: app.py:71
+msgid "Our FTC Team Members | Modus Vivendi Oradea"
+msgstr "Our FTC Team Members | Modus Vivendi Oradea"
+
+#: app.py:72
+msgid "FTC Awards & Achievements | Modus Vivendi Oradea"
+msgstr "FTC Awards & Achievements | Modus Vivendi Oradea"
+
+#: app.py:75
+msgid "Modus Vivendi Oradea - FIRST Tech Challenge Team"
+msgstr "Modus Vivendi Oradea - FIRST Tech Challenge Team"
+
+# SEO Descriptions for FTC context (English)
+#: app.py:83
+msgid "seo_description_home"
+msgstr ""
+"Modus Vivendi Oradea is the first and most experienced FTC team in "
+"Oradea, with 8 years of experience in FIRST Tech Challenge competitive "
+"robotics."
+
+#: app.py:84
+msgid "seo_description_about"
+msgstr ""
+"Discover the story of FTC team Modus Vivendi Oradea - 8 years of "
+"innovation in competitive robotics and STEM education for youth."
+
+#: app.py:85
+msgid "seo_description_privacy"
+msgstr ""
+"Privacy policy of FTC team Modus Vivendi Oradea - how we protect the data"
+" of our members and website visitors."
+
+#: app.py:86
+msgid "seo_description_contact"
+msgstr ""
+"Contact FTC team Modus Vivendi Oradea for partnerships, sponsorships or "
+"information about our robotics programs."
+
+#: app.py:87
+msgid "seo_description_team"
+msgstr ""
+"Meet the members of FTC team Modus Vivendi Oradea - young people "
+"passionate about robotics, programming and technological innovation."
+
+#: app.py:88
+msgid "seo_description_projects"
+msgstr ""
+"Explore the robotic projects of FTC team Modus Vivendi Oradea - from "
+"competition robots to technological innovations."
+
+#: app.py:89
+msgid "seo_description_achievements"
+msgstr ""
+"Discover the awards and achievements of FTC team Modus Vivendi Oradea in "
+"FIRST Tech Challenge competitions in Romania and Europe."
+
+#: app.py:92
+msgid "seo_description_default"
+msgstr ""
+"Modus Vivendi Oradea - the FTC team with the most experience in Oradea in"
+" competitive robotics and STEM education."
+
+#: app.py:168 templates/index.html:3
+msgid "Home Page"
+msgstr "Home Page"
+
+#: app.py:169 app.py:201 templates/index.html:18
+msgid "Stay tuned for updates."
+msgstr "Stay tuned for updates."
+
+#: app.py:170
+msgid "donate_message"
+msgstr ""
+"is a non-profit organization and depends on you. Contribute to our cause "
+"by redirecting 3.5% of your income tax to us! Download Form 230 now and "
+"support our activities at no additional cost to you."
+
+# SEO Keywords for FTC context (English)
+#: templates/base.html:32
+msgid "seo_keywords"
+msgstr ""
+"modus vivendi, oradea, ftc, first tech challenge, competitive robotics, "
+"stem education, robotics team, robotics competitions romania"
+
+#: templates/base.html:134
+msgid "Default Notification"
+msgstr "Default Notification"
+
+#: templates/base.html:137
+msgid "Default Logo"
+msgstr "Default Logo"
+
+#: templates/base.html:146
+msgid "Default Content"
+msgstr "Default Content"
+
+#: templates/index.html:10
+msgid "Logo"
+msgstr "Logo"
+
+#: templates/index.html:19
+msgid "Welcome to our website! We are working on something great!"
+msgstr "Welcome to our website! We are working on something great!"
+
+#~ msgid "Download Form 230"
+#~ msgstr "Download Form 230"
+
+#~ msgid "Modus Vivendi Oradea"
+#~ msgstr "Modus Vivendi Oradea"
+
+# Add these to translations/en/LC_MESSAGES/messages.po (English)
+# Your SEO title variations (English translations)
+#~ msgid ""
+#~ "Modus Vivendi Oradea - Prima echipă "
+#~ "FTC din Oradea | Robotică de "
+#~ "excelență"
+#~ msgstr ""
+#~ "Modus Vivendi Oradea - First FTC "
+#~ "Team in Oradea | Excellence in "
+#~ "Robotics"
+
+#~ msgid ""
+#~ "Echipa FTC Modus Vivendi | 8 ani"
+#~ " de experiență în robotică competițională"
+#~ msgstr "FTC Team Modus Vivendi | 8 Years Experience in Competitive Robotics"
+
+msgid "Robotică FTC Oradea - Modus Vivendi | FIRST Tech Challenge România"
+msgstr "FTC Robotics Oradea - Modus Vivendi | FIRST Tech Challenge Romania"
+
+msgid "Modus Vivendi - Echipa de robotică din Oradea | FTC Champions"
+msgstr "Modus Vivendi - Oradea Robotics Team | FTC Champions"
+
+msgid "FIRST Tech Challenge Oradea | Modus Vivendi - Inovație în robotică"
+msgstr "FIRST Tech Challenge Oradea | Modus Vivendi - Innovation in Robotics"
+
+msgid "Robotică competițională Oradea | Modus Vivendi FTC Team"
+msgstr "Competitive Robotics Oradea | Modus Vivendi FTC Team"
+
+msgid "Modus Vivendi - Design Award Winners | Prima echipă FTC Oradea"
+msgstr "Modus Vivendi - Design Award Winners | First FTC Team Oradea"
+
+msgid "STEM Education Oradea | Echipa FTC Modus Vivendi"
+msgstr "STEM Education Oradea | FTC Team Modus Vivendi"
+
+msgid "Robotică pentru tineri Oradea | Modus Vivendi FIRST Tech Challenge"
+msgstr "Robotics for Youth Oradea | Modus Vivendi FIRST Tech Challenge"
+
+# Add to translations/en/LC_MESSAGES/messages.po (ENGLISH):
+
+# SEO Description Keys (add these first)
+msgid "seo_description_home"
+msgstr "Modus Vivendi Oradea is the first and most experienced FTC team in Oradea, with 8 years of experience in FIRST Tech Challenge competitive robotics."
+
+msgid "seo_keywords"
+msgstr "modus vivendi, oradea, ftc, first tech challenge, competitive robotics, stem education, robotics team, robotics competitions romania"
+
+# Your SEO Title Variations (English translations)
+msgid "Modus Vivendi Oradea - Prima echipă FTC din Oradea | Robotică de excelență"
+msgstr "Modus Vivendi Oradea - First FTC Team in Oradea | Excellence in Robotics"
+
+msgid "Echipa FTC Modus Vivendi | 8 ani de experiență în robotică competițională"
+msgstr "FTC Team Modus Vivendi | 8 Years Experience in Competitive Robotics"
+
+msgid "Robotică FTC Oradea - Modus Vivendi | FIRST Tech Challenge România"
+msgstr "FTC Robotics Oradea - Modus Vivendi | FIRST Tech Challenge Romania"
+
+msgid "Modus Vivendi - Echipa de robotică din Oradea | FTC Champions"
+msgstr "Modus Vivendi - Oradea Robotics Team | FTC Champions"
+
+msgid "FIRST Tech Challenge Oradea | Modus Vivendi - Inovație în robotică"
+msgstr "FIRST Tech Challenge Oradea | Modus Vivendi - Innovation in Robotics"
+
+msgid "Robotică competițională Oradea | Modus Vivendi FTC Team"
+msgstr "Competitive Robotics Oradea | Modus Vivendi FTC Team"
+
+msgid "Modus Vivendi - Design Award Winners | Prima echipă FTC Oradea"
+msgstr "Modus Vivendi - Design Award Winners | First FTC Team Oradea"
+
+msgid "STEM Education Oradea | Echipa FTC Modus Vivendi"
+msgstr "STEM Education Oradea | FTC Team Modus Vivendi"
+
+msgid "Robotică pentru tineri Oradea | Modus Vivendi FIRST Tech Challenge"
+msgstr "Robotics for Youth Oradea | Modus Vivendi FIRST Tech Challenge"

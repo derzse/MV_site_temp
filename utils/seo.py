@@ -7,6 +7,7 @@ import random
 from datetime import datetime
 from typing import List, Dict, Optional
 from flask import request, current_app
+from flask_babel import _
 
 
 class SEOTitleManager:
@@ -40,23 +41,18 @@ class SEOTitleManager:
         self.performance_stats = {}
         
     def get_title(self) -> str:
-        """
-        Get a title based on the configured strategy
-        """
-        if self.strategy == 'random':
-            title = self._get_random_title()
-        elif self.strategy == 'consistent':
-            title = self._get_consistent_title()
-        elif self.strategy == 'daily':
-            title = self._get_time_based_title('daily')
-        elif self.strategy == 'weekly':
-            title = self._get_time_based_title('weekly')
-        elif self.strategy == 'hourly':
-            title = self._get_time_based_title('hourly')
-        else:
-            # Default to first title if strategy is unknown
-            title = self.titles[0]
-            
+        """Get a title based on the configured strategy"""
+        strategy_methods = {
+            'random': self._get_random_title,
+            'consistent': self._get_consistent_title,
+            'daily': lambda: self._get_time_based_title('daily'),
+            'weekly': lambda: self._get_time_based_title('weekly'),
+            'hourly': lambda: self._get_time_based_title('hourly')
+        }
+        
+        method = strategy_methods.get(self.strategy, lambda: self.titles[0])
+        title = method()
+        
         # Track usage
         self._track_usage(title)
         return title
@@ -79,24 +75,21 @@ class SEOTitleManager:
             return self.titles[title_index]
             
         except Exception as e:
-            current_app.logger.warning(f"Error in consistent title generation: {e}")
-            return self.titles[0]  # Fallback to first title
+            if current_app:
+                current_app.logger.warning(f"Error in consistent title generation: {e}")
+            return self.titles[0]  # Fallback
             
     def _get_time_based_title(self, period: str) -> str:
-        """
-        Time-based title rotation
-        """
+        """Time-based title rotation"""
         now = datetime.now()
         
-        if period == 'hourly':
-            time_unit = now.hour
-        elif period == 'daily':
-            time_unit = now.timetuple().tm_yday  # Day of year
-        elif period == 'weekly':
-            time_unit = now.isocalendar()[1]  # Week number
-        else:
-            time_unit = 0
-            
+        time_units = {
+            'hourly': now.hour,
+            'daily': now.timetuple().tm_yday,  # Day of year
+            'weekly': now.isocalendar()[1]     # Week number
+        }
+        
+        time_unit = time_units.get(period, 0)
         title_index = time_unit % len(self.titles)
         return self.titles[title_index]
         
@@ -116,9 +109,7 @@ class SEOTitleManager:
         """
         Track how often each title is used
         """
-        if title not in self.performance_stats:
-            self.performance_stats[title] = 0
-        self.performance_stats[title] += 1
+        self.performance_stats[title] = self.performance_stats.get(title, 0) + 1
         
     def get_performance_stats(self) -> Dict[str, int]:
         """
@@ -161,11 +152,79 @@ class SEOTitleManager:
         Change the rotation strategy
         """
         valid_strategies = ['random', 'consistent', 'daily', 'weekly', 'hourly']
-        if strategy in valid_strategies:
-            self.strategy = strategy
-        else:
+        if strategy not in valid_strategies:
             raise ValueError(f"Invalid strategy. Must be one of: {valid_strategies}")
+        self.strategy = strategy
+        
+# Add this to your utils/seo.py
 
+class LanguageAwareSEOTitleManager(SEOTitleManager):
+    """
+    SEO Title Manager with language-specific title sets
+    """
+    
+    def __init__(self, strategy: str = 'consistent'):
+        # Romanian titles
+        self.titles_ro = [
+            "Modus Vivendi Oradea - Prima echipă FTC din Oradea | Robotică de excelență",
+            "Echipa FTC Modus Vivendi | 8 ani de experiență în robotică competițională",
+            "Robotică FTC Oradea - Modus Vivendi | FIRST Tech Challenge România",
+            "Modus Vivendi - Echipa de robotică din Oradea | FTC Champions",
+            "FIRST Tech Challenge Oradea | Modus Vivendi - Inovație în robotică",
+            "Robotică competițională Oradea | Modus Vivendi FTC Team",
+            "Modus Vivendi - Design Award Winners | Prima echipă FTC Oradea",
+            "STEM Education Oradea | Echipa FTC Modus Vivendi",
+            "Robotică pentru tineri Oradea | Modus Vivendi FIRST Tech Challenge"
+        ]
+        
+        # English titles
+        self.titles_en = [
+            "Modus Vivendi Oradea - First FTC Team from Oradea | Robotics Excellence",
+            "FTC Team Modus Vivendi | 8 Years of Competitive Robotics Experience",
+            "FTC Robotics Oradea - Modus Vivendi | FIRST Tech Challenge Romania",
+            "Modus Vivendi - Oradea Robotics Team | FTC Champions",
+            "FIRST Tech Challenge Oradea | Modus Vivendi - Innovation in Robotics",
+            "Competitive Robotics Oradea | Modus Vivendi FTC Team",
+            "Modus Vivendi - Design Award Winners | First FTC Team Oradea",
+            "STEM Education Oradea | FTC Team Modus Vivendi",
+            "Robotics for Youth Oradea | Modus Vivendi FIRST Tech Challenge"
+        ]
+        
+        # Initialize with Romanian titles (default)
+        super().__init__(titles=self.titles_ro, strategy=strategy)
+        self.current_language = 'ro'
+        
+    def set_language(self, language: str):
+        """Switch between Romanian and English title sets"""
+        if language == 'ro':
+            self.titles = self.titles_ro
+            self.current_language = 'ro'
+        elif language == 'en':
+            self.titles = self.titles_en
+            self.current_language = 'en'
+        else:
+            # Default to Romanian
+            self.titles = self.titles_ro
+        
+        self.current_language = language
+        
+    def get_title(self, language: str = None) -> str:
+        """Get title with optional language override"""
+        if language and language != self.current_language:
+            # Temporarily switch language
+            old_titles = self.titles
+            old_language = self.current_language
+            
+            self.set_language(language)
+            title = super().get_title()
+            
+            # Restore previous state
+            self.titles = old_titles
+            self.current_language = old_language
+            
+            return title
+        else:
+            return super().get_title()
 
 # Factory function for easy instantiation
 def create_seo_manager(strategy: str = 'consistent') -> SEOTitleManager:
@@ -173,3 +232,73 @@ def create_seo_manager(strategy: str = 'consistent') -> SEOTitleManager:
     Factory function to create SEOTitleManager with default settings
     """
     return SEOTitleManager(strategy=strategy)
+
+
+# ============================================
+# SEO TITLE & DESCRIPTION FUNCTIONS
+# ============================================
+
+def get_seo_title(page_key='home', custom_title=None, use_seo_rotation=True, seo_manager=None):
+    """
+    Generate SEO-optimized translated titles
+    Args:
+        page_key: The page identifier for translation lookup
+        custom_title: Optional custom title override
+        use_seo_rotation: Whether to use your SEO rotation system
+        seo_manager: Instance of SEOTitleManager (optional)
+    """
+    if custom_title:
+        return f"{_(custom_title)} - Modus Vivendi Oradea"
+    
+    # Use your sophisticated SEO rotation for home page
+    if page_key == 'home' and use_seo_rotation and seo_manager:
+        # Get the SEO-optimized title using your rotation strategy
+        base_title = seo_manager.get_title()
+        # Translate the title - this will be handled by your translation keys
+        return _(base_title)
+    
+    # Define page-specific SEO titles with translation keys for other pages
+    seo_titles = {
+        'home': _('Modus Vivendi Oradea - FTC Robotics Team | Innovation in Oradea'),
+        'about': _('About Modus Vivendi | FTC Team Oradea - 8 Years Experience'),
+        'privacy': _('Privacy Policy | Modus Vivendi Oradea FTC Team'),
+        'contact': _('Contact Modus Vivendi | FTC Robotics Team Oradea'),
+        'projects': _('Our FTC Projects | Modus Vivendi Robotics Oradea'),
+        'events': _('FTC Events & Competitions | Modus Vivendi Oradea'),
+        'team': _('Our FTC Team Members | Modus Vivendi Oradea'),
+        'achievements': _('FTC Awards & Achievements | Modus Vivendi Oradea'),
+    }
+    
+    return seo_titles.get(page_key, _('Modus Vivendi Oradea - FIRST Tech Challenge Team'))
+
+
+def get_seo_description(page_key='home', custom_description=None):
+    """Generate SEO-optimized translated meta descriptions"""
+    if custom_description:
+        return _(custom_description)
+    
+    seo_descriptions = {
+        'home': _('seo_description_home'),
+        'about': _('seo_description_about'), 
+        'privacy': _('seo_description_privacy'),
+        'contact': _('seo_description_contact'),
+        'team': _('seo_description_team'),
+        'projects': _('seo_description_projects'),
+        'achievements': _('seo_description_achievements'),
+    }
+    
+    return seo_descriptions.get(page_key, _('seo_description_default'))
+
+
+# ============================================
+# FACTORY FUNCTIONS
+# ============================================
+
+def create_seo_manager(strategy: str = 'consistent') -> SEOTitleManager:
+    """Factory function to create SEOTitleManager"""
+    return SEOTitleManager(strategy=strategy)
+
+
+def create_language_aware_seo_manager(strategy: str = 'consistent') -> LanguageAwareSEOTitleManager:
+    """Factory function to create LanguageAwareSEOTitleManager"""
+    return LanguageAwareSEOTitleManager(strategy=strategy)

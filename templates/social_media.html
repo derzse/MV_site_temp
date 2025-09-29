@@ -1,0 +1,56 @@
+<!-- Reusable social media component -->
+
+<div class="social-media-component {{ layout_class or 'vertical' }}">
+  {% if show_title %}
+    <h3 class="social-title">{{ title or 'Follow Us' }}</h3>
+  {% endif %}
+  
+  <div class="social-icons-temp {{ 'social-icons-horizontal' if layout_class == 'horizontal' else '' }}">
+    <a href="https://www.facebook.com/RO061-Modus-Vivendi-297190080685870" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="social-link facebook"
+       aria-label="Follow us on Facebook">
+      <i class="fab fa-facebook-f" aria-hidden="true"></i>
+      {% if show_labels %}
+        <span>Facebook</span>
+      {% endif %}
+    </a>
+    
+    <a href="https://www.instagram.com/modusvivendioradea/" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="social-link instagram"
+       aria-label="Follow us on Instagram">
+      <i class="fab fa-instagram" aria-hidden="true"></i>
+      {% if show_labels %}
+        <span>Instagram</span>
+      {% endif %}
+    </a>
+    
+    <a href="https://www.linkedin.com/company/modus-vivendi-oradea/mycompany/" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="social-link linkedin"
+       aria-label="Follow us on LinkedIn">
+      <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+      {% if show_labels %}
+        <span>LinkedIn</span>
+      {% endif %}
+    </a>
+  </div>
+</div>
+
+<!-- Usage examples: -->
+<!-- 
+In your templates, you can include this component like:
+
+1. Simple vertical layout with labels:
+{% include 'social_media.html' with { 'show_labels': true, 'show_title': true } %}
+
+2. Horizontal layout without title:
+{% include 'social_media.html' with { 'layout_class': 'horizontal', 'show_labels': false, 'show_title': false } %}
+
+3. Footer version:
+{% include 'social_media.html' with { 'layout_class': 'horizontal', 'show_labels': true, 'show_title': true, 'title': 'Connect With Us' } %}
+-->

@@ -1,0 +1,78 @@
+<!-- templates/language_switcher.html -->
+<div class="language-switcher">
+    <div class="dropdown">
+        <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-language"></i>
+            {% if CURRENT_LANGUAGE == 'ro' %}
+                RO
+            {% else %}
+                EN
+            {% endif %}
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+            {% for code, name in LANGUAGES.items() %}
+                <li>
+                    <a class="dropdown-item {% if CURRENT_LANGUAGE == code %}active{% endif %}" 
+                       href="{{ url_for('set_language', language=code) }}">
+                        <!-- {{name}} -->
+                        {% if code == 'ro' %}
+                            <span class="flag">
+                                <img src="{{ url_for('static', filename='images/flags/ro.png') }}" alt="🇷🇴" class="flag-img">
+                                <!-- 🇷🇴 -->
+                            </span>
+                        {% else %}
+                            <span class="flag">
+                                <img src="{{ url_for('static', filename='images/flags/en.png') }}" alt="EN" class="flag-img">
+                                <!-- 🇬🇧 -->
+                            </span>
+                        {% endif %}
+                        {{name}}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+
+<style>
+.language-switcher {
+    display: inline-flex; 
+     /* inline-block; */
+}
+
+.language-switcher .dropdown-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding: 0.5rem 1rem; */
+}
+
+.language-switcher .dropdown-item.active {
+    background-color: var(--murrey, #722f37);
+    color: var(--ghost-white, #f8f8ff);
+}
+
+.language-switcher .flag {
+    margin-right: 0.5rem;
+}
+
+.language-switcher .btn {
+    border-color: var(--school-bus-yellow, #ffd320);
+    color: var(--school-bus-yellow, #ffd320);
+}
+
+.language-switcher .btn:hover {
+    background-color: var(--school-bus-yellow, #ffd320);
+    color: var(--murrey, #722f37);
+    border-color: var(--school-bus-yellow, #ffd320);
+}
+
+.flag-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+</style>
