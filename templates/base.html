@@ -132,10 +132,10 @@
     </div>
     {% endif %}
 
-    <div id="notification-bar" style="background-color: #ddd; text-align: center; padding: 5px;">
+    <div id="notification-bar" class="notification-bar">
         {% block notification_bar %}{{ _('Default Notification') }}{% endblock %}
     </div>
-    <header style="display: flex; justify-content: space-between; align-items: center; background-color: #f8f9fa; padding: 10px;">
+    <header>
         <div>{% block header %}{{ _('Default Logo') }}{% endblock header %}</div>
         <div class="header-actions">
             {% include 'language_switcher.html' %}

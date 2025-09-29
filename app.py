@@ -4,6 +4,7 @@ import os
 from utils import SEOTitleManager, get_seo_title, get_seo_description
 from utils.seo import LanguageAwareSEOTitleManager
 from flask import jsonify
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -292,6 +293,10 @@ def seo_debug():
         <a href="/">🏠 Home</a>
     </p>
     """
+
+@app.context_processor
+def inject_current_year():
+    return {'current_year': datetime.now().year}
 
 if __name__ == '__main__':
     app.run(debug=True)
