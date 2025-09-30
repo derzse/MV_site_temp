@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-28 15:00+0300\n"
+"POT-Creation-Date: 2025-09-29 23:28+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,107 +17,111 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: app.py:65
-msgid "Modus Vivendi Oradea - FTC Robotics Team | Innovation in Oradea"
+#: app/main/routes.py:78 app_old.py:93
+msgid "Modus Vivendi Oradea - FTC Robotics Team"
 msgstr ""
 
-#: app.py:66
-msgid "About Modus Vivendi | FTC Team Oradea - 8 Years Experience"
-msgstr ""
-
-#: app.py:67
-msgid "Privacy Policy | Modus Vivendi Oradea FTC Team"
-msgstr ""
-
-#: app.py:68
-msgid "Contact Modus Vivendi | FTC Robotics Team Oradea"
-msgstr ""
-
-#: app.py:69
-msgid "Our FTC Projects | Modus Vivendi Robotics Oradea"
-msgstr ""
-
-#: app.py:70
-msgid "FTC Events & Competitions | Modus Vivendi Oradea"
-msgstr ""
-
-#: app.py:71
-msgid "Our FTC Team Members | Modus Vivendi Oradea"
-msgstr ""
-
-#: app.py:72
-msgid "FTC Awards & Achievements | Modus Vivendi Oradea"
-msgstr ""
-
-#: app.py:75
-msgid "Modus Vivendi Oradea - FIRST Tech Challenge Team"
-msgstr ""
-
-#: app.py:83
-msgid "seo_description_home"
-msgstr ""
-
-#: app.py:84
-msgid "seo_description_about"
-msgstr ""
-
-#: app.py:85
-msgid "seo_description_privacy"
-msgstr ""
-
-#: app.py:86
-msgid "seo_description_contact"
-msgstr ""
-
-#: app.py:87
-msgid "seo_description_team"
-msgstr ""
-
-#: app.py:88
-msgid "seo_description_projects"
-msgstr ""
-
-#: app.py:89
-msgid "seo_description_achievements"
-msgstr ""
-
-#: app.py:92
+#: app/main/routes.py:85 app_old.py:100 utils/seo.py:293
 msgid "seo_description_default"
 msgstr ""
 
-#: app.py:168 templates/index.html:3
+#: app/main/routes.py:151 app_old.py:145 templates/index.html:8
 msgid "Home Page"
 msgstr ""
 
-#: app.py:169 app.py:201 templates/index.html:18
+#: app/main/routes.py:152 app/main/routes.py:234 app_old.py:146 app_old.py:228
+#: templates/index.html:23
 msgid "Stay tuned for updates."
 msgstr ""
 
-#: app.py:170
+#: app/main/routes.py:153 app_old.py:147
 msgid "donate_message"
 msgstr ""
 
-#: templates/base.html:32
+#: templates/base.html:30
 msgid "seo_keywords"
 msgstr ""
 
-#: templates/base.html:134
+#: templates/base.html:136
 msgid "Default Notification"
 msgstr ""
 
-#: templates/base.html:137
+#: templates/base.html:139
 msgid "Default Logo"
 msgstr ""
 
-#: templates/base.html:146
+#: templates/base.html:150
 msgid "Default Content"
 msgstr ""
 
-#: templates/index.html:10
+#: templates/index.html:15
 msgid "Logo"
 msgstr ""
 
-#: templates/index.html:19
+#: templates/index.html:24
 msgid "Welcome to our website! We are working on something great!"
 msgstr ""
 
+#: utils/seo.py:265
+msgid "Modus Vivendi Oradea - FTC Robotics Team | Innovation in Oradea"
+msgstr ""
+
+#: utils/seo.py:266
+msgid "About Modus Vivendi | FTC Team Oradea - 8 Years Experience"
+msgstr ""
+
+#: utils/seo.py:267
+msgid "Privacy Policy | Modus Vivendi Oradea FTC Team"
+msgstr ""
+
+#: utils/seo.py:268
+msgid "Contact Modus Vivendi | FTC Robotics Team Oradea"
+msgstr ""
+
+#: utils/seo.py:269
+msgid "Our FTC Projects | Modus Vivendi Robotics Oradea"
+msgstr ""
+
+#: utils/seo.py:270
+msgid "FTC Events & Competitions | Modus Vivendi Oradea"
+msgstr ""
+
+#: utils/seo.py:271
+msgid "Our FTC Team Members | Modus Vivendi Oradea"
+msgstr ""
+
+#: utils/seo.py:272
+msgid "FTC Awards & Achievements | Modus Vivendi Oradea"
+msgstr ""
+
+#: utils/seo.py:275
+msgid "Modus Vivendi Oradea - FIRST Tech Challenge Team"
+msgstr ""
+
+#: utils/seo.py:284
+msgid "seo_description_home"
+msgstr ""
+
+#: utils/seo.py:285
+msgid "seo_description_about"
+msgstr ""
+
+#: utils/seo.py:286
+msgid "seo_description_privacy"
+msgstr ""
+
+#: utils/seo.py:287
+msgid "seo_description_contact"
+msgstr ""
+
+#: utils/seo.py:288
+msgid "seo_description_team"
+msgstr ""
+
+#: utils/seo.py:289
+msgid "seo_description_projects"
+msgstr ""
+
+#: utils/seo.py:290
+msgid "seo_description_achievements"
+msgstr ""

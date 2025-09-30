@@ -1,7 +1,11 @@
 <!-- templates/language_switcher.html -->
 <div class="language-switcher">
     <div class="dropdown">
-        <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn btn-sm btn-outline-light dropdown-toggle" 
+                type="button" 
+                id="languageDropdown" 
+                data-bs-toggle="dropdown" 
+                aria-expanded="false">
             <i class="fas fa-language"></i>
             {% if CURRENT_LANGUAGE == 'ro' %}
                 RO
@@ -12,8 +16,8 @@
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
             {% for code, name in LANGUAGES.items() %}
                 <li>
-                    <a class="dropdown-item {% if CURRENT_LANGUAGE == code %}active{% endif %}" 
-                       href="{{ url_for('set_language', language=code) }}">
+                    <a class="dropdown-item {% if code==CURRENT_LANGUAGE %}active{% endif %}" 
+                       href="{{ url_for('main.set_language', language=code) }}">
                         <!-- {{name}} -->
                         {% if code == 'ro' %}
                             <span class="flag">

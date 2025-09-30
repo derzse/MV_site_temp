@@ -7,8 +7,10 @@ import random
 from datetime import datetime
 from typing import List, Dict, Optional
 from flask import request, current_app
-from flask_babel import _
+from flask_babel import gettext as _
 
+# Constants
+BRAND_NAME = "Modus Vivendi Oradea"
 
 class SEOTitleManager:
     """
@@ -248,15 +250,16 @@ def get_seo_title(page_key='home', custom_title=None, use_seo_rotation=True, seo
         seo_manager: Instance of SEOTitleManager (optional)
     """
     if custom_title:
-        return f"{_(custom_title)} - Modus Vivendi Oradea"
+        return f"{_(custom_title)} - {BRAND_NAME}"
     
     # Use your sophisticated SEO rotation for home page
     if page_key == 'home' and use_seo_rotation and seo_manager:
         # Get the SEO-optimized title using your rotation strategy
         base_title = seo_manager.get_title()
+
         # Translate the title - this will be handled by your translation keys
-        return _(base_title)
-    
+        return f"{_(base_title)}"
+
     # Define page-specific SEO titles with translation keys for other pages
     seo_titles = {
         'home': _('Modus Vivendi Oradea - FTC Robotics Team | Innovation in Oradea'),
@@ -290,15 +293,15 @@ def get_seo_description(page_key='home', custom_description=None):
     return seo_descriptions.get(page_key, _('seo_description_default'))
 
 
-# ============================================
-# FACTORY FUNCTIONS
-# ============================================
+# # ============================================
+# # FACTORY FUNCTIONS
+# # ============================================
 
-def create_seo_manager(strategy: str = 'consistent') -> SEOTitleManager:
-    """Factory function to create SEOTitleManager"""
-    return SEOTitleManager(strategy=strategy)
+# def create_seo_manager(strategy: str = 'consistent') -> SEOTitleManager:
+#     """Factory function to create SEOTitleManager"""
+#     return SEOTitleManager(strategy=strategy)
 
 
-def create_language_aware_seo_manager(strategy: str = 'consistent') -> LanguageAwareSEOTitleManager:
-    """Factory function to create LanguageAwareSEOTitleManager"""
-    return LanguageAwareSEOTitleManager(strategy=strategy)
+# def create_language_aware_seo_manager(strategy: str = 'consistent') -> LanguageAwareSEOTitleManager:
+#     """Factory function to create LanguageAwareSEOTitleManager"""
+#     return LanguageAwareSEOTitleManager(strategy=strategy)

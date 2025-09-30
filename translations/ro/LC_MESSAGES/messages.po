@@ -57,6 +57,8 @@ msgid "Modus Vivendi Oradea - FIRST Tech Challenge Team"
 msgstr "Modus Vivendi Oradea - Echipa FIRST Tech Challenge"
 
 # SEO Descriptions for FTC context
+# Add to translations/ro/LC_MESSAGES/messages.po (ROMANIAN):
+# SEO Description Keys (add these first)
 #: app.py:83
 msgid "seo_description_home"
 msgstr ""
@@ -150,66 +152,28 @@ msgstr "Logo"
 msgid "Welcome to our website! We are working on something great!"
 msgstr "Bun venit pe website-ul nostru! Lucrăm la ceva grozav!"
 
-#~ msgid "Download Form 230"
-#~ msgstr "Descarcă Formularul 230"
+msgid "Download Form 230"
+msgstr "Descarcă Formularul 230"
 
-#~ msgid "Modus Vivendi Oradea"
-#~ msgstr "Modus Vivendi Oradea"
-
-# Add these to translations/ro/LC_MESSAGES/messages.po (Romanian)
-# Your existing SEO title variations (now as translation keys)
-#~ msgid ""
-#~ "Modus Vivendi Oradea - Prima echipă "
-#~ "FTC din Oradea | Robotică de "
-#~ "excelență"
-#~ msgstr ""
-#~ "Modus Vivendi Oradea - Prima echipă "
-#~ "FTC din Oradea | Robotică de "
-#~ "excelență"
-
-#~ msgid ""
-#~ "Echipa FTC Modus Vivendi | 8 ani"
-#~ " de experiență în robotică competițională"
-#~ msgstr ""
-#~ "Echipa FTC Modus Vivendi | 8 ani"
-#~ " de experiență în robotică competițională"
-
-msgid "Robotică FTC Oradea - Modus Vivendi | FIRST Tech Challenge România"
-msgstr "Robotică FTC Oradea - Modus Vivendi | FIRST Tech Challenge România"
-
-msgid "Modus Vivendi - Echipa de robotică din Oradea | FTC Champions"
-msgstr "Modus Vivendi - Echipa de robotică din Oradea | FTC Champions"
-
-msgid "FIRST Tech Challenge Oradea | Modus Vivendi - Inovație în robotică"
-msgstr "FIRST Tech Challenge Oradea | Modus Vivendi - Inovație în robotică"
-
-msgid "Robotică competițională Oradea | Modus Vivendi FTC Team"
-msgstr "Robotică competițională Oradea | Modus Vivendi FTC Team"
-
-msgid "Modus Vivendi - Design Award Winners | Prima echipă FTC Oradea"
-msgstr "Modus Vivendi - Design Award Winners | Prima echipă FTC Oradea"
-
-msgid "STEM Education Oradea | Echipa FTC Modus Vivendi"
-msgstr "STEM Education Oradea | Echipa FTC Modus Vivendi"
-
-msgid "Robotică pentru tineri Oradea | Modus Vivendi FIRST Tech Challenge"
-msgstr "Robotică pentru tineri Oradea | Modus Vivendi FIRST Tech Challenge"
-
-# Add to translations/ro/LC_MESSAGES/messages.po (ROMANIAN):
-
-# SEO Description Keys (add these first)
-msgid "seo_description_home"
-msgstr "Modus Vivendi Oradea este prima și cea mai experimentată echipă FTC din Oradea, cu 8 ani de experiență în robotică competițională FIRST Tech Challenge."
-
-msgid "seo_keywords"
-msgstr "modus vivendi, oradea, ftc, first tech challenge, robotică competițională, stem education, echipa robotică, competiții robotică romania"
+msgid "Modus Vivendi Oradea"
+msgstr "Modus Vivendi Oradea"
 
 # Your SEO Title Variations (from seo.py)
-msgid "Modus Vivendi Oradea - Prima echipă FTC din Oradea | Robotică de excelență"
-msgstr "Modus Vivendi Oradea - Prima echipă FTC din Oradea | Robotică de excelență"
+msgid ""
+"Modus Vivendi Oradea - Prima echipă "
+"FTC din Oradea | Robotică de "
+"excelență"
+msgstr ""
+"Modus Vivendi Oradea - Prima echipă "
+"FTC din Oradea | Robotică de "
+"excelență"
 
-msgid "Echipa FTC Modus Vivendi | 8 ani de experiență în robotică competițională"
-msgstr "Echipa FTC Modus Vivendi | 8 ani de experiență în robotică competițională"
+msgid ""
+"Echipa FTC Modus Vivendi | 8 ani"
+" de experiență în robotică competițională"
+msgstr ""
+"Echipa FTC Modus Vivendi | 8 ani"
+" de experiență în robotică competițională"
 
 msgid "Robotică FTC Oradea - Modus Vivendi | FIRST Tech Challenge România"
 msgstr "Robotică FTC Oradea - Modus Vivendi | FIRST Tech Challenge România"
@@ -231,3 +195,4 @@ msgstr "STEM Education Oradea | Echipa FTC Modus Vivendi"
 
 msgid "Robotică pentru tineri Oradea | Modus Vivendi FIRST Tech Challenge"
 msgstr "Robotică pentru tineri Oradea | Modus Vivendi FIRST Tech Challenge"
+
